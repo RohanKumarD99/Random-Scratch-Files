@@ -1,0 +1,70 @@
+package com.example.myapplication
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.TextView
+
+class MainActivity : AppCompatActivity() {
+
+    lateinit var e1:EditText
+    lateinit var e2:EditText
+    lateinit var t1:TextView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.vib)
+
+    }
+
+        fun add(view:View?)
+        {
+            e1=findViewById(R.id.e1)
+            e2=findViewById(R.id.e2)
+            t1=findViewById(R.id.t1)
+
+            val num1=e1.text.toString().toDouble()
+            val num2=e2.text.toString().toDouble()
+            val res=num1+num2
+            t1.setText(""+res)
+        }
+
+    fun sub(view:View?)
+    {
+        e1=findViewById(R.id.e1)
+        e2=findViewById(R.id.e2)
+        t1=findViewById(R.id.t1)
+
+        val num1=e1.text.toString().toDouble()
+        val num2=e2.text.toString().toDouble()
+        val res=num1-num2
+        t1.setText(""+res)
+    }
+
+    fun mul(view:View?)
+    {
+        e1=findViewById(R.id.e1)
+        e2=findViewById(R.id.e2)
+        t1=findViewById(R.id.t1)
+
+        val num1=e1.text.toString().toDouble()
+        val num2=e2.text.toString().toDouble()
+        val res=num1*num2
+        t1.setText(""+res)
+    }
+
+    fun div(view:View?)
+    {
+        e1=findViewById(R.id.e1)
+        e2=findViewById(R.id.e2)
+        t1=findViewById(R.id.t1)
+
+        val num1=e1.text.toString().toDouble()
+        val num2=e2.text.toString().toDouble()
+        val res=num1/num2
+        t1.setText(""+res)
+    }
+
+
+}
